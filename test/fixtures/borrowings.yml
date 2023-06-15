@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  copy_id: 1
+  reader_id: 1
+  borrowing_date: 2023-04-18
+  return_date: 2023-04-18
+
+two:
+  copy_id: 1
+  reader_id: 1
+  borrowing_date: 2023-04-18
+  return_date: 2023-04-18

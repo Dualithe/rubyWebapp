@@ -1,0 +1,27 @@
+<%= form_with(model: librarian) do |form| %>
+  <% if librarian.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(librarian.errors.count, "error") %> prohibited this librarian from being saved:</h2>
+
+      <ul>
+        <% librarian.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :librarian_id, style: "display: block" %>
+    <%= form.number_field :librarian_id %>
+  </div>
+
+  <div>
+    <%= form.label :hire_date, style: "display: block" %>
+    <%= form.date_field :hire_date %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
