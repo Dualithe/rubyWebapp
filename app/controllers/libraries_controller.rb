@@ -1,4 +1,5 @@
 class LibrariesController < ApplicationController
+  before_action :authenticate_user!, only: [ :edit, :update, :destroy, :create]
   before_action :set_library, only: %i[ show edit update destroy ]
 
   # GET /libraries or /libraries.json

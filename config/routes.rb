@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users
   resources :books
   resources :libraries
+  resources :static
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
    root "static#index"
   get '/time', to: 'time#index'

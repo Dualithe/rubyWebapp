@@ -1,4 +1,5 @@
 class ReadersController < ApplicationController
+  before_action :authenticate_user!, only: [ :edit, :update, :destroy, :create]
   before_action :set_reader, only: %i[ show edit update destroy ]
 
   # GET /readers or /readers.json

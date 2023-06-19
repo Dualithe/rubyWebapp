@@ -1,4 +1,5 @@
 class LibrariansController < ApplicationController
+  before_action :authenticate_user!, only: [ :edit, :update, :destroy, :create]
   before_action :set_librarian, only: %i[ show edit update destroy ]
 
   # GET /librarians or /librarians.json
